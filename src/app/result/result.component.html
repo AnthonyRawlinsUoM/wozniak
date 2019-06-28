@@ -1,0 +1,10 @@
+<div *ngFor="let r of results">
+    <div *ngIf="r.data.message">{{r.data.message}}</div>
+    <div *ngIf="r.data.results">
+        <p>Model: {{r.data.models}}</p>
+        <pre>{{r.data.results}}</pre>
+        <p>Start: {{r.data.start}}</p>
+        <p>Finish: {{r.data.finish}}</p>
+    </div>
+</div>
+<button (click)="sendQuery()">Send Query</button>
